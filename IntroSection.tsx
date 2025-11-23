@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Language, TRANSLATIONS, COLORS } from '../types';
+import { Language, TRANSLATIONS, COLORS } from './types';
 import { TiltCard } from './TiltCard';
 
 interface IntroSectionProps {

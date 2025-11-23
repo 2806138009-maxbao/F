@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
-import { COLORS } from '../types';
+import { COLORS } from './types';
 
 interface WaveBackgroundProps {
   dimmed?: boolean;
