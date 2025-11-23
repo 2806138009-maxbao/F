@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Language, TRANSLATIONS, TooltipContent, COLORS } from '../types';
+import { Language, TRANSLATIONS, TooltipContent, COLORS } from './types';
 import { TiltCard } from './TiltCard';
 
 interface InteractiveOverlayProps {
