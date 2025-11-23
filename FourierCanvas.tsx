@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import p5 from 'p5';
-import { COLORS, Language, TRANSLATIONS, WaveType } from '../types';
+import { COLORS, Language, TRANSLATIONS, WaveType } from './types';
 import { FormulaDisplay } from './FormulaDisplay';
 
 // Reusing helper components for consistent typography
