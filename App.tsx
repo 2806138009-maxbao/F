@@ -1,13 +1,12 @@
-
 import React, { useState, useRef, useEffect } from 'react';
-import { FourierCanvas } from './components/FourierCanvas';
-import { ControlPanel } from './components/ControlPanel';
-import { InteractiveOverlay } from './components/InteractiveOverlay';
-import { IntroSection } from './components/IntroSection';
-import { WaveBackground } from './components/WaveBackground';
-import { EpicycleDrawing } from './components/EpicycleDrawing'; 
+import { FourierCanvas } from './FourierCanvas';
+import { ControlPanel } from './ControlPanel';
+import { InteractiveOverlay } from './InteractiveOverlay';
+import { IntroSection } from './IntroSection';
+import { WaveBackground } from './WaveBackground';
+import { EpicycleDrawing } from './EpicycleDrawing'; 
 import { Language, TRANSLATIONS, TooltipContent, COLORS, WaveType } from './types';
-import { CustomCursor } from './components/CustomCursor';
+import { CustomCursor } from './CustomCursor';
 
 const App: React.FC = () => {
   const [n, setN] = useState<number>(3);
@@ -88,7 +87,7 @@ const App: React.FC = () => {
       <div 
         className="fixed inset-0 pointer-events-none z-[2] opacity-[0.07] mix-blend-overlay"
         style={{ 
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E")` 
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
         }}
       />
       
@@ -101,7 +100,7 @@ const App: React.FC = () => {
       <div className="fixed top-5 right-8 z-[60]">
         <button 
            onClick={toggleLang}
-           className="text-[11px] font-bold tracking-wider px-3 py-1.5 rounded text-[#8A8F98] hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5 font-sans backdrop-blur-md bg-[#16171A]/30 cursor-none"
+           className="text-[11px] font-bold tracking-wider px-3 py-1.5 rounded text-[#8A8F98] hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5 font-mono uppercase"
          >
            {lang === 'en' ? 'CN' : 'EN'}
          </button>
