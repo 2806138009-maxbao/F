@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { WaveType } from '../types';
+import { WaveType } from './types';
 
 // Declare KaTeX on window object since we are loading via CDN
 declare global {
