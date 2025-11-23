@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { Language, TRANSLATIONS, COLORS, WaveType } from '../types';
+// 修改了这里：从 '../types' 改成了 './types'
+import { Language, TRANSLATIONS, COLORS, WaveType } from './types';
 import { TiltCard } from './TiltCard';
 
 interface ControlPanelProps {
@@ -35,7 +35,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({ n, setN, waveType, s
         <div className="p-5 flex flex-col gap-5">
             <div className="flex justify-between items-center">
               <label 
-                className="text-[#D0D6E0] text-xs font-medium uppercase tracking-wider cursor-help transition-all duration-300 ease-out origin-left inline-block hover:scale-110 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                className="text-[#D0D6E0] text-xs font-medium uppercase tracking-wider cursor-help transition-all duration-300 ease-out origin-left inline-block hover:scale-110 hover:text-white hover:shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                 onMouseEnter={() => onHoverLabel(true)}
                 onMouseLeave={() => onHoverLabel(false)}
               >
